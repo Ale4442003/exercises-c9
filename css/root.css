@@ -1,0 +1,17 @@
+:root {
+    /* Sizes */
+    --max-container-w: 1152px;
+    --container-p: 1.5rem; /* 1.5rem * 16px = 24px */
+    --section-p: 5rem;
+    /* Colors */
+    --primary-color: #2174ea;
+    --accent-color: #a4f4cf;
+    --text-color: #62748e;
+    --title-color: #1d293d;
+    --title-inverse-color: #f1f5f9;
+    --bg-light-color: #f1f5f9;
+    --bg-dark-color: #101d2d;
+    /* Fonts */
+    --title-font-family: "Playfair Display", serif;
+    --text-font-family: "Inter", serif;
+}

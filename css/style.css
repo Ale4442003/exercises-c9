@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('./root.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--text-font-family);
+    font-size: 1.25rem;
+    color: var(--text-color);
+}
+
+html, body {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    transition: all ease-in-out .15s;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+a.light:hover {
+    color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--title-font-family);
+    color: var(--title-color);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+section {
+    padding: var(--section-p) 0;
+}
+
+.btn {
+    padding: 0.75rem 1.25rem;
+    color: white;
+    transition: all ease-in-out .15s;
+    font-size: 1rem;
+}
+
+.btn.btn-primary {
+    background-color: rgba(33, 116, 234, 1);
+    color: white;
+}
+
+.btn.btn-primary:hover {
+    background-color: rgba(20, 71, 230, 1);
+}
+
+.btn.btn-inverse {
+    background-color: rgba(49, 65, 88, 1);
+    color: white;
+}
+
+.btn.btn-inverse:hover {
+    background-color: rgba(29, 41, 61, 1);;
+}
+
+.card-info .card-info__header img {
+    height: 64px;
+    width: 64px;
+    margin-bottom: 0.5rem;
+}
+
+.card-info .card-info__body h3 {
+    font-size: 1.5rem;
+    line-height: 2.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-info .card-info__body p {
+    font-size: 1.125rem;
+    line-height: 1.687rem;
+}
+
+.section__title {
+    padding-bottom: 3rem;
+}
+
+.section__title h2 {
+    font-size: 3rem;
+    line-height: 3.625rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section__title p {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    text-align: center;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start; /* Allinea nel verso del direction */
+    align-items: center; /* Allinea nel verso opposto al direction */
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-container-w); /* 1152px */
+    padding: 0 var(--container-p); /* 1.5rem */
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+/* NAVBAR */
+nav {
+    height: 80px;
+    background-color: var(--bg-dark-color);
+}
+
+nav * {
+    color: #90a1b9;
+}
+
+nav a {
+    font-size: 1rem;
+}
+
+nav .nav__logo img {
+    width: 32px;
+    height: 32px;
+}
+
+nav .nav__menu {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-grow: 1;
+    padding: 0 2rem;
+}
+
+nav .nav__actions {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+/* HEADER */
+header {
+    background-color: var(--bg-dark-color);
+    padding: 7rem 0 12rem 0;
+    clip-path: polygon(0 0, 5760px 0, 5760px calc(100% - 352px), 0 100%);
+}
+
+header * {
+    color: #90a1b9;
+}
+
+header .header__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+header .header__content h1 {
+    color: var(--title-inverse-color);
+}
+
+header .header__content p {
+    line-height: 2rem;
+}
+
+header .header__content .header__content-cta {
+    display: flex;
+    gap: 1rem;
+}
+
+header .header__image .header__image-effect {
+    width: 100%;
+    min-width: 540px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .header__image .header__image-effect::after {
+    content: " ";
+    height: 95%;
+    width: 100%;
+    border: solid 2px #314158;
+    position: absolute;
+    top: calc(5% + 8px);
+    left: 12px;
+    z-index: -1;
+}
+
+header .header__image .header__image-effect img {
+    width: 100%;
+    height: auto;
+}
+
+header .header__image .header__image-effect .header__image-effect-btn {
+    width: 80px;
+    height: 80px;
+    background: white;
+    opacity: 0.8;
+    border-radius: 50px;
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    transition: all ease-in-out .15s;
+}
+
+header .header__image .header__image-effect .header__image-effect-btn:hover {
+    opacity: 1;
+}
+
+header .header__image .header__image-effect .header__image-effect-btn svg {
+    fill: var(--primary-color);
+    width: 80px;
+}
+
+/*SECTION-1*/
+section#section-1 .section-1__cards {
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+section#section-1 .section-1__cards .card-info {
+    flex: calc((100% / 3) - 5rem);
+}
+
+/*SECTION-2*/
+
+#section-2 {
+    width: 100%;
+    height: 664.1px;
+    background-color:#f1f5f9;
+}
+
+section#section-2 .container > div {
+    width: 100%;
+    max-width: 768px;
+    margin: auto;
+}
+
+section#section-2 .section-2__buttons {
+    display: flex;
+    padding-bottom: 3rem;
+    gap: 3rem;
+}
+
+section#section-2 .section-2__buttons .section-2__buttons-item {
+    flex: calc((100% / 4) - 3rem);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+section#section-2 .section-2__buttons .section-2__buttons-item .section-2__buttons-item-icon {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    width: 56px;
+    height: 56px;
+    border-radius: 50px;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 0.75rem;
+}
+
+section#section-2 .section-2__buttons .section-2__buttons-item .section-2__buttons-item-text p {
+    font-size: 1.125rem;
+}
+
+section#section-2 .section-2__image img {
+    width: 100%;
+    height: auto;
+    box-shadow:  0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+.divider {
+    border: 1px solid #f9f7f1;
+    width: 1104px;
+    margin: 80px;
+}
